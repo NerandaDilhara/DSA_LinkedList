@@ -45,7 +45,18 @@ class LinkedList{
     }
 }
 public class Main{
-    public static void main(){
-        System.out.println();
+    public static void main(String[] args){
+        LinkedList list1 = new LinkedList();
+
+        for(int i=1; i<=10; i++){
+            list1.insertFirst((i+2) * 2);
+        }
+
+        list1.displayList();
+
+        list1.deleteFirst();
+
+        list1.displayList();
+
     }
 }

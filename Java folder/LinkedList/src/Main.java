@@ -22,15 +22,26 @@ class LinkedList{
     }
 
     public void displayList(){
+        Link current = this.first;
 
+        while(current != null){
+            current.displayLink();
+            current = current.next;
+        }
+
+        System.out.println();
     }
 
-    public void insertFirst(){
-
+    public void insertFirst(int item){
+        Link newLink = new Link(item);
+        newLink.next = first;
+        first = newLink;
     }
 
-    public void deleteFirst(){
-
+    public Link deleteFirst(){
+        Link temp = first;
+        first = first.next;
+        return temp;
     }
 }
 public class Main{
